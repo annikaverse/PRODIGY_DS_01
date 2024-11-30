@@ -1,0 +1,10 @@
+Age,Gender
+20,Male
+25,Female
+30,Female
+20,Male
+25,Male
+30,Female
+40,Female
+35,Male
+30,Female

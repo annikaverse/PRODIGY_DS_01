@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample Dataset Creation
+data = pd.DataFrame({
+    "Age": [20, 25, 30, 20, 25, 30, 40, 35, 30],
+    "Gender": ["Male", "Female", "Female", "Male", "Male", "Female", "Female", "Male", "Female"]
+})
+
+# Bar Chart for Gender Distribution
+gender_counts = data["Gender"].value_counts()
+plt.bar(gender_counts.index, gender_counts.values, color=['blue', 'pink'])
+plt.xlabel("Gender")
+plt.ylabel("Count")
+plt.title("Distribution of Gender")
+plt.savefig("gender_distribution_bar_chart.png")
+plt.show()
+
+# Histogram for Age Distribution
+plt.hist(data["Age"], bins=5, color='green', edgecolor='black')
+plt.xlabel("Age Range")
+plt.ylabel("Frequency")
+plt.title("Distribution of Age")
+plt.savefig("age_distribution_histogram.png")
+plt.show()
